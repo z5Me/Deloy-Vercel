@@ -646,7 +646,7 @@ function App() {
             <div className='flex flex-col w-full max-w-[349px] gap-y-4'>
               <div className='flex px-4 py-3 bg-white rounded-full gap-x-3 items-center'>
                 <HiOutlineMail size={24} className='text-primary/40' />
-                <input className='border-none outline-none w-full text-primary/40' type="text" placeholder='Enter your email address' />
+                <input className='border-none outline-none w-full text-primary/40' type="text" placeholder='Hahihihihiihihihi' />
               </div>
               <button className='px-4 py-3 bg-white rounded-full'>
                 <p className='text-base font-Satoshi font-medium text-primary'>Subscribe to Newsletter</p>
