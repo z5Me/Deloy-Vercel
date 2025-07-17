@@ -1,5 +1,16 @@
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router"
 
 const PriceList = () => {
+    const location = useLocation();
+    const [url, setUrl] = useState<string>('');
+
+    useEffect(() => {
+        console.log(location.pathname)
+        if (location.pathname === '/cart') return setUrl('/cart/checkout');
+        if (location.pathname === '/cart/checkout') return setUrl('/cart/order');
+    }, [location])
+
     return (
         <div className="xl:w-[40%] w-full">
             <div className="w-full flex flex-col gap-y-5 p-6 border border-primary/10 rounded-2xl">
@@ -28,13 +39,16 @@ const PriceList = () => {
                     <p className="text-primary font-medium">Total</p>
                     <p className="font-bold">$467</p>
                 </div>
-                <div className="w-full px-10 flex justify-center items-center bg-[#C8C9CB] hover:bg-primary rounded-full select-none cursor-pointer">
-                    <div className="text-white sm:h-[56px] h-[48px] sm:text-lg text-base font-medium flex justify-center items-center gap-x-4">
-                        <p>Checkout</p>
-                        <div className="bg-white w-[2px] h-3"></div>
-                        <p>$467.00</p>
+                <Link to={url} >
+                    <div className="w-full px-10 flex justify-center items-center bg-[#C8C9CB] hover:bg-primary rounded-full select-none cursor-pointer">
+                        <div className="text-white sm:h-[56px] h-[48px] sm:text-lg text-base font-medium flex justify-center items-center gap-x-4">
+                            <p>Checkout</p>
+                            <div className="bg-white w-[2px] h-3"></div>
+                            <p>$467.00</p>
+                        </div>
+
                     </div>
-                </div>
+                </Link>
             </div>
         </div>
     )
