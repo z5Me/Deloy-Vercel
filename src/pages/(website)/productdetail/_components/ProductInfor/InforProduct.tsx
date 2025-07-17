@@ -105,65 +105,6 @@ const attribute = [
     }
 ]
 
-const attributeValue = [
-    {
-        id: 'b1',
-        name: 'Red',
-        slug: 'red',
-        type: 'Color',
-        value: '#FF0000'
-    },
-    {
-        id: 'b2',
-        name: 'Blue',
-        slug: 'blue',
-        type: 'Color',
-        value: '#0000FF'
-    },
-    {
-        id: 'b3',
-        name: 'Medium',
-        slug: 'medium',
-        type: 'Size',
-        value: 'medium'
-    },
-    {
-        id: 'b4',
-        name: 'Large',
-        slug: 'large',
-        type: 'Size',
-        value: 'large'
-    },
-    {
-        id: 'b5',
-        name: '5kg',
-        slug: '5kg',
-        type: 'Weight',
-        value: '5kg'
-    },
-    {
-        id: 'b6',
-        name: '10kg',
-        slug: '10kg',
-        type: 'Weight',
-        value: '10kg'
-    },
-    {
-        id: 'b7',
-        name: 'Green',
-        slug: 'green',
-        type: 'Color',
-        value: '#008000'
-    },
-    {
-        id: 'b8',
-        name: 'Cao Cap',
-        slug: 'cao cap',
-        type: 'Material',
-        value: 'cao cap'
-    },
-]
-
 const variants = [
     {
         id: 'c1',

@@ -10,7 +10,7 @@ import { MapContainer, Marker, TileLayer, useMap, useMapEvents } from "react-lea
 import { useDispatch } from "react-redux";
 
 // Fix lỗi icon marker không hiển thị đúng
-delete L.Icon.Default.prototype._getIconUrl;
+delete (L.Icon.Default.prototype as any)._getIconUrl;
 L.Icon.Default.mergeOptions({
     iconRetinaUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png",
     iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
@@ -102,24 +102,6 @@ const GoogleMap = ({ setOpenAddAddress, dataUser }: { setOpenAddAddress: (value:
             // setSuggestions([]);
         } catch (err) {
             console.error("Không lấy được địa chỉ từ tọa độ (fetchAddress)");
-        }
-    };
-
-    // Geocoding: từ địa chỉ → lat,lng
-    const handleSearch = async () => {
-        if (!inputAddress) return;
-        try {
-            const res = await axios.get(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(inputAddress)}`);
-            if (res.data && res.data.length > 0) {
-                const first = res.data[0];
-                const newPos = { lat: parseFloat(first.lat), lng: parseFloat(first.lon) };
-                setPosition(newPos);
-                setAddress(first.display_name);
-            } else {
-                alert("Không tìm thấy địa chỉ (handleSearch)");
-            }
-        } catch (err) {
-            console.error(err);
         }
     };
 

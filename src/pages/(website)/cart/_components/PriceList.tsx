@@ -1,6 +1,5 @@
-import { Tag } from 'lucide-react'
 
-const PriceList = ({ screenWidth }: { screenWidth: number }) => {
+const PriceList = () => {
     return (
         <div className="xl:w-[40%] w-full">
             <div className="w-full flex flex-col gap-y-5 p-6 border border-primary/10 rounded-2xl">

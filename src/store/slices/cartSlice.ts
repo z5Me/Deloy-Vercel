@@ -88,11 +88,11 @@ const cartSlice = createSlice({
         total: 390
     },
     reducers: {
-        addToCart(state, actions) {
+        // addToCart(state, actions) {
 
-        }
+        // }
     },
-    extraReducers: (builder) => {
+    extraReducers: () => {
 
     },
 })

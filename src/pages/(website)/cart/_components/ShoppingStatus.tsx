@@ -19,6 +19,7 @@ const ShoppingStatus = ({ screenWidth }: any) => {
                     pCartRef.current?.classList.remove('block');
                     pCartRef.current?.classList.add('hidden');
                 }, 200);
+                setChangeStatus(1);
             } else {
                 pCartRef.current?.classList.remove('hidden');
                 setTimeout(() => {
