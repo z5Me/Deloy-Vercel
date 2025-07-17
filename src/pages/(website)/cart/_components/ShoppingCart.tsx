@@ -120,7 +120,7 @@ const ShoppingCart = () => {
                     <p className='sm:text-base text-sm font-semibold underline cursor-pointer text-nowrap'>Clear cart</p>
                 </div>
             </div>
-            <PriceList screenWidth={screenWidth} />
+            <PriceList />
         </>
     )
 }
